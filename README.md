@@ -1,1 +1,0 @@
-https://4oVEN.github.io/rsschool-cv/cv
