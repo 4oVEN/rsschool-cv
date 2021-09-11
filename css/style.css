@@ -15,17 +15,26 @@ a{
   margin: 0 auto;
   padding: 0 10px;
 }
+.header__top{
+  background-color: #04819E;
+}
 .header{
   background-image: linear-gradient(to right top, #4ebffe, #46b3f5, #40a7ec, #3b9be3, #378fd9);
 }
+.menu__list{
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px 30px 20px;
+}
+
 .header__inner{
   padding-top: 40px;
   padding-bottom: 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .list{
-  margin-top: 20px;
+  margin-top: 10px;
   margin-left: 20px;
 }
 .list__item{
@@ -44,7 +53,7 @@ li{
 .img{
   object-fit: cover;
 }
-.main{
+.information{
   margin-left: 30px;
 }
 .header__text{
@@ -52,6 +61,7 @@ li{
   line-height: 35px;
 }
 .title{
+  padding-top: 15px;
   font-size: 35px;
   line-height: 50px;
 }
@@ -59,13 +69,18 @@ li{
   font-size: 20px;
   line-height: 30px;
 }
+.text__skills-item,
+.soft__skills-item{
+  display: inline;
+}
 .education{
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
-.languages{
+.languages,
+.projects{
   margin-left: 20px;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .footer{
   background-color: #04819E;
@@ -79,6 +94,7 @@ li{
   width: 70px;
 }
 @media  screen and (max-width: 768px) {
+
   .header__inner{
     display: block;
   }
@@ -97,8 +113,17 @@ li{
     font-size: 30px;
     line-height: 45px;
   }
-  .main{
+  .information{
     margin-left: 20px;
     margin-top: 20px;
+  }
+}
+@media  screen and (max-width: 530px){
+  .menu__list{
+    display: block;
+  }
+  .menu__list-item{
+    padding: 10px;
+    text-align: center;
   }
 }
