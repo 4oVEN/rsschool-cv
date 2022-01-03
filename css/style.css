@@ -96,6 +96,9 @@ li{
 .logo{
   width: 70px;
 }
+.menu__btn{
+  display: none;
+}
 @media  screen and (max-width: 768px) {
 
   .header__inner{
@@ -122,11 +125,50 @@ li{
   }
 }
 @media  screen and (max-width: 530px){
-  .menu__list{
-    display: block;
-  }
   .menu__list-item{
     padding: 10px;
     text-align: center;
+  }
+  .menu__btn{
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    z-index: 10;
+  }
+  .menu__btn::after,
+  .menu__btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background-color: #0E0E0E;
+  }
+  .menu__btn::before{
+    top: 0;
+  }
+  .menu__btn::after{
+    bottom: 0;
+  }
+  .menu__btn span{
+    display: block;
+    height: 2px;
+    background-color: #0E0E0E;
+  }
+  .menu__list{
+    transform: translateY(-200%);
+    display: block;
+    background-color: #04819E;
+    transition: all .3s;
+    padding: 0;
+  }
+  .menu__list.menu__list--active{
+    transform: translateY(0%);
   }
 }
